@@ -4,6 +4,7 @@ import java.util.Properties;
 import java.util.Random;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.*;
 
 /**
  *
@@ -39,42 +40,42 @@ Properties prop = propertyLoadObject.properties;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        clearButton = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        createButton = new javax.swing.JButton();
-        backButton = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jLabel14 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        buttonGroup1 = new ButtonGroup();
+        jLabel1 = new JLabel();
+        jPanel1 = new JPanel();
+        jLabel5 = new JLabel();
+        jLabel3 = new JLabel();
+        jComboBox1 = new JComboBox<>();
+        jTextField9 = new JTextField();
+        jTextField5 = new JTextField();
+        jLabel8 = new JLabel();
+        jTextField3 = new JPasswordField();
+        jLabel13 = new JLabel();
+        jLabel12 = new JLabel();
+        jLabel2 = new JLabel();
+        clearButton = new JButton();
+        jLabel9 = new JLabel();
+        jLabel4 = new JLabel();
+        jTextField7 = new JTextField();
+        jTextField2 = new JTextField();
+        jComboBox2 = new JComboBox<>();
+        jTextField4 = new JTextField();
+        jLabel7 = new JLabel();
+        jLabel11 = new JLabel();
+        jTextField1 = new JTextField();
+        createButton = new JButton();
+        backButton = new JButton();
+        jRadioButton1 = new JRadioButton();
+        jLabel14 = new JLabel();
+        jRadioButton2 = new JRadioButton();
+        jLabel6 = new JLabel();
+        jTextField6 = new JTextField();
+        jLabel10 = new JLabel();
+        jLabel16 = new JLabel();
+        jTextField10 = new JTextField();
+        jComboBox3 = new JComboBox<>();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jLabel15 = new javax.swing.JLabel();
+        jLabel15 = new JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,7 +87,7 @@ Properties prop = propertyLoadObject.properties;
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setText("MICR NO.");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Checking","Saving", "Investing"  }));
+        jComboBox1.setModel(new DefaultComboBoxModel<>(new String[] { "Select", "Checking","Saving", "Investing"  }));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel8.setText("Name");
@@ -117,7 +118,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField2.setEditable(false);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "India", "Canada", "US", " " }));
+        jComboBox2.setModel(new DefaultComboBoxModel<>(new String[] { "Select", "India", "Canada", "US", " " }));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel7.setText("Address");
@@ -158,9 +159,9 @@ Properties prop = propertyLoadObject.properties;
 
         jLabel16.setText("Amount");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "What is your nick name?", "What is your mother maiden name?" }));
+        jComboBox3.setModel(new DefaultComboBoxModel<>(new String[] { "What is your nick name?", "What is your mother maiden name?" }));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        javax.swing.GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,7 +289,7 @@ Properties prop = propertyLoadObject.properties;
         jLabel15.setForeground(new java.awt.Color(255, 0, 51));
         jLabel15.setText("Thank You for Banking with Us.");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -472,41 +473,41 @@ Properties prop = propertyLoadObject.properties;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton createButton;
-    private javax.swing.JButton backButton;
-    private javax.swing.JButton clearButton;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private ButtonGroup buttonGroup1;
+    private JButton createButton;
+    private JButton backButton;
+    private JButton clearButton;
+    private JComboBox<String> jComboBox1;
+    private JComboBox<String> jComboBox2;
+    private JComboBox<String> jComboBox3;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField9;
+    private JLabel jLabel1;
+    private JLabel jLabel10;
+    private JLabel jLabel11;
+    private JLabel jLabel12;
+    private JLabel jLabel13;
+    private JLabel jLabel14;
+    private JLabel jLabel15;
+    private JLabel jLabel16;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JLabel jLabel4;
+    private JLabel jLabel5;
+    private JLabel jLabel6;
+    private JLabel jLabel7;
+    private JLabel jLabel8;
+    private JLabel jLabel9;
+    private JPanel jPanel1;
+    private JRadioButton jRadioButton1;
+    private JRadioButton jRadioButton2;
+    private JTextField jTextField1;
+    private JTextField jTextField10;
+    private JTextField jTextField2;
+    private JPasswordField jTextField3;
+    private JTextField jTextField4;
+    private JTextField jTextField5;
+    private JTextField jTextField6;
+    private JTextField jTextField7;
+    private JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

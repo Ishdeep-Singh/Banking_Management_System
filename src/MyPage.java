@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Properties;
-
+import javax.swing.*;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 
@@ -108,132 +108,132 @@ Properties prop = propertyLoadObject.properties;
     private void initComponents() {
 
         jCalendar1 = new com.toedter.calendar.JCalendar();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        searchProfile = new javax.swing.JButton();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        editProfileFields = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        searchButton = new javax.swing.JButton();
-        jTextField18 = new javax.swing.JTextField();
-        totalButton = new javax.swing.JButton();
-        depositButton = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
-        jTextField22 = new javax.swing.JTextField();
-        jTextField23 = new javax.swing.JTextField();
-        jTextField24 = new javax.swing.JTextField();
-        searchInTransfer = new javax.swing.JButton();
-        totalInTransfer = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField25 = new javax.swing.JTextField();
-        jTextField26 = new javax.swing.JTextField();
-        showInTransfer = new javax.swing.JButton();
-        transferButton = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jTextField27 = new javax.swing.JTextField();
-        jTextField28 = new javax.swing.JTextField();
-        jTextField29 = new javax.swing.JTextField();
-        jTextField30 = new javax.swing.JTextField();
-        searchInWithdraw = new javax.swing.JButton();
-        jTextField31 = new javax.swing.JTextField();
-        jTextField32 = new javax.swing.JTextField();
-        showInWithdraw = new javax.swing.JButton();
-        withdrawButton = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jPanel6 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
-        jTextField33 = new javax.swing.JTextField();
-        viewBalanceSearch = new javax.swing.JButton();
-        jTextField34 = new javax.swing.JTextField();
-        jTextField35 = new javax.swing.JTextField();
-        jTextField36 = new javax.swing.JTextField();
-        jTextField37 = new javax.swing.JTextField();
-        jTextField38 = new javax.swing.JTextField();
-        jTextField39 = new javax.swing.JTextField();
-        jTextField40 = new javax.swing.JTextField();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jTextField41 = new javax.swing.JTextField();
-        jTextField42 = new javax.swing.JTextField();
-        changePinButton = new javax.swing.JButton();
-        clearPinButton = new javax.swing.JButton();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel41 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
+        jLabel1 = new JLabel();
+        jLabel2 = new JLabel();
+        jLabel3 = new JLabel();
+        jTextField1 = new JTextField();
+        jTextField2 = new JTextField();
+        searchProfile = new JButton();
+        jTabbedPane1 = new JTabbedPane();
+        jPanel1 = new JPanel();
+        jLabel4 = new JLabel();
+        jLabel5 = new JLabel();
+        jLabel6 = new JLabel();
+        jLabel7 = new JLabel();
+        jLabel8 = new JLabel();
+        jTextField3 = new JTextField();
+        jTextField4 = new JTextField();
+        jTextField5 = new JTextField();
+        jTextField6 = new JTextField();
+        jTextField7 = new JTextField();
+        jLabel9 = new JLabel();
+        jLabel10 = new JLabel();
+        jLabel11 = new JLabel();
+        jLabel12 = new JLabel();
+        jLabel13 = new JLabel();
+        jTextField8 = new JTextField();
+        jTextField9 = new JTextField();
+        jTextField10 = new JTextField();
+        jTextField11 = new JTextField();
+        jTextField12 = new JTextField();
+        editProfileFields = new JButton();
+        jButton3 = new JButton();
+        jPanel2 = new JPanel();
+        jLabel14 = new JLabel();
+        jLabel15 = new JLabel();
+        jLabel16 = new JLabel();
+        jLabel17 = new JLabel();
+        jLabel18 = new JLabel();
+        jTextField13 = new JTextField();
+        jTextField14 = new JTextField();
+        jTextField15 = new JTextField();
+        jTextField16 = new JTextField();
+        jTextField17 = new JTextField();
+        searchButton = new JButton();
+        jTextField18 = new JTextField();
+        totalButton = new JButton();
+        depositButton = new JButton();
+        jPanel3 = new JPanel();
+        jLabel19 = new JLabel();
+        jLabel20 = new JLabel();
+        jLabel21 = new JLabel();
+        jLabel22 = new JLabel();
+        jLabel23 = new JLabel();
+        jLabel24 = new JLabel();
+        jTextField19 = new JTextField();
+        jTextField20 = new JTextField();
+        jTextField21 = new JTextField();
+        jTextField22 = new JTextField();
+        jTextField23 = new JTextField();
+        jTextField24 = new JTextField();
+        searchInTransfer = new JButton();
+        totalInTransfer = new JButton();
+        jComboBox1 = new JComboBox<>();
+        jTextField25 = new JTextField();
+        jTextField26 = new JTextField();
+        showInTransfer = new JButton();
+        transferButton = new JButton();
+        jPanel4 = new JPanel();
+        jLabel25 = new JLabel();
+        jLabel26 = new JLabel();
+        jLabel27 = new JLabel();
+        jLabel28 = new JLabel();
+        jLabel29 = new JLabel();
+        jLabel30 = new JLabel();
+        jTextField27 = new JTextField();
+        jTextField28 = new JTextField();
+        jTextField29 = new JTextField();
+        jTextField30 = new JTextField();
+        searchInWithdraw = new JButton();
+        jTextField31 = new JTextField();
+        jTextField32 = new JTextField();
+        showInWithdraw = new JButton();
+        withdrawButton = new JButton();
+        jPanel5 = new JPanel();
+        jScrollPane1 = new JScrollPane();
+        jTable1 = new JTable();
+        jPanel6 = new JPanel();
+        jScrollPane2 = new JScrollPane();
+        jTable2 = new JTable();
+        jPanel7 = new JPanel();
+        jLabel31 = new JLabel();
+        jLabel32 = new JLabel();
+        jLabel33 = new JLabel();
+        jLabel34 = new JLabel();
+        jLabel35 = new JLabel();
+        jLabel36 = new JLabel();
+        jLabel37 = new JLabel();
+        jLabel38 = new JLabel();
+        jTextField33 = new JTextField();
+        viewBalanceSearch = new JButton();
+        jTextField34 = new JTextField();
+        jTextField35 = new JTextField();
+        jTextField36 = new JTextField();
+        jTextField37 = new JTextField();
+        jTextField38 = new JTextField();
+        jTextField39 = new JTextField();
+        jTextField40 = new JTextField();
+        jPanel8 = new JPanel();
+        jLabel39 = new JLabel();
+        jLabel40 = new JLabel();
+        jTextField41 = new JPasswordField();
+        jTextField42 = new JPasswordField();
+        changePinButton = new JButton();
+        clearPinButton = new JButton();
+        jPanel9 = new JPanel();
+        jLabel41 = new JLabel();
+        jPanel10 = new JPanel();
+        jLabel46 = new JLabel();
+        jLabel42 = new JLabel();
+        jLabel43 = new JLabel();
+        jLabel47 = new JLabel();
+        jLabel45 = new JLabel();
+        jLabel44 = new JLabel();
+        jLabel48 = new JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"RTEmagicC_ibanking-logo_33_converted.png")); // NOI18N
+        jLabel1.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"RTEmagicC_ibanking-logo_33_converted.png")); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("User");
@@ -243,7 +243,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField2.setEditable(false);
 
-        searchProfile.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"Eye-2-icon-1.png")); // NOI18N
+        searchProfile.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"Eye-2-icon-1.png")); // NOI18N
         searchProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchProfileActionPerformed(evt);
@@ -304,7 +304,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField12.setEditable(false);
 
-        editProfileFields.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"icon_edit_new.gif")); // NOI18N
+        editProfileFields.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"icon_edit_new.gif")); // NOI18N
         editProfileFields.setText("Edit");
         editProfileFields.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -312,7 +312,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"Save-icon.png")); // NOI18N
+        jButton3.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"Save-icon.png")); // NOI18N
         jButton3.setText("Save");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -320,7 +320,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        javax.swing.GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -430,7 +430,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField16.setEditable(false);
 
-        searchButton.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"search.gif")); // NOI18N
+        searchButton.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"search.gif")); // NOI18N
         searchButton.setText("Search");
         searchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -440,7 +440,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField18.setEditable(false);
 
-        totalButton.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"ok.gif")); // NOI18N
+        totalButton.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"ok.gif")); // NOI18N
         totalButton.setText("Total");
         totalButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -448,7 +448,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        depositButton.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"ok.gif")); // NOI18N
+        depositButton.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"ok.gif")); // NOI18N
         depositButton.setText("Deposit");
         depositButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -456,7 +456,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        javax.swing.GroupLayout jPanel2Layout = new GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -550,7 +550,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField24.setEditable(false);
 
-        searchInTransfer.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"search.gif")); // NOI18N
+        searchInTransfer.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"search.gif")); // NOI18N
         searchInTransfer.setText("Search");
         searchInTransfer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -586,7 +586,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        transferButton.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"ok.gif")); // NOI18N
+        transferButton.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"ok.gif")); // NOI18N
         transferButton.setText("Transfer");
         transferButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -594,7 +594,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        javax.swing.GroupLayout jPanel3Layout = new GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -709,7 +709,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField30.setEditable(false);
 
-        searchInWithdraw.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"search.gif")); // NOI18N
+        searchInWithdraw.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"search.gif")); // NOI18N
         searchInWithdraw.setText("Search");
         searchInWithdraw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -719,7 +719,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField32.setEditable(false);
 
-        showInWithdraw.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"ok.gif")); // NOI18N
+        showInWithdraw.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"ok.gif")); // NOI18N
         showInWithdraw.setText("Show");
         showInWithdraw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -727,7 +727,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        withdrawButton.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"minus.gif")); // NOI18N
+        withdrawButton.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"minus.gif")); // NOI18N
         withdrawButton.setText("Withdraw");
         withdrawButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -735,7 +735,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        javax.swing.GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -817,7 +817,7 @@ Properties prop = propertyLoadObject.properties;
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        javax.swing.GroupLayout jPanel5Layout = new GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -851,7 +851,7 @@ Properties prop = propertyLoadObject.properties;
         ));
         jScrollPane2.setViewportView(jTable2);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        javax.swing.GroupLayout jPanel6Layout = new GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -896,7 +896,7 @@ Properties prop = propertyLoadObject.properties;
         jLabel38.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel38.setText("Nomination Registered");
 
-        viewBalanceSearch.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"search.gif")); // NOI18N
+        viewBalanceSearch.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"search.gif")); // NOI18N
         viewBalanceSearch.setText("Search");
         viewBalanceSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -918,7 +918,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField40.setEditable(false);
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        javax.swing.GroupLayout jPanel7Layout = new GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1001,7 +1001,7 @@ Properties prop = propertyLoadObject.properties;
         jLabel40.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel40.setText("Enter New Pin");
 
-        changePinButton.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"grid_update.png")); // NOI18N
+        changePinButton.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"grid_update.png")); // NOI18N
         changePinButton.setText("Change");
         changePinButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1009,7 +1009,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        clearPinButton.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"Actions-edit-clear-icon.png")); // NOI18N
+        clearPinButton.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"Actions-edit-clear-icon.png")); // NOI18N
         clearPinButton.setText("Clear");
         clearPinButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1017,7 +1017,7 @@ Properties prop = propertyLoadObject.properties;
             }
         });
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        javax.swing.GroupLayout jPanel8Layout = new GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1057,7 +1057,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTabbedPane1.addTab("Change pin", jPanel8);
 
-        jLabel41.setIcon(new javax.swing.ImageIcon(prop.getProperty("imagesFolderLocation")+"Group_Photo.jpeg")); // NOI18N
+        jLabel41.setIcon(new ImageIcon(prop.getProperty("imagesFolderLocation")+"Group_Photo.jpeg")); // NOI18N
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 153, 153)), "Technos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(0, 102, 102))); // NOI18N
 
@@ -1079,7 +1079,7 @@ Properties prop = propertyLoadObject.properties;
         jLabel44.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel44.setText("Instagram");
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        javax.swing.GroupLayout jPanel10Layout = new GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1115,7 +1115,7 @@ Properties prop = propertyLoadObject.properties;
         jLabel48.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel48.setText("iBanking V 1.0");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        javax.swing.GroupLayout jPanel9Layout = new GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1147,7 +1147,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTabbedPane1.addTab("About", jPanel9);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1697,128 +1697,128 @@ Properties prop = propertyLoadObject.properties;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton searchProfile;
-    private javax.swing.JButton transferButton;
-    private javax.swing.JButton searchInWithdraw;
-    private javax.swing.JButton showInWithdraw;
-    private javax.swing.JButton withdrawButton;
-    private javax.swing.JButton viewBalanceSearch;
-    private javax.swing.JButton changePinButton;
-    private javax.swing.JButton clearPinButton;
-    private javax.swing.JButton editProfileFields;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton searchButton;
-    private javax.swing.JButton totalButton;
-    private javax.swing.JButton depositButton;
-    private javax.swing.JButton searchInTransfer;
-    private javax.swing.JButton totalInTransfer;
-    private javax.swing.JButton showInTransfer;
+    private JButton searchProfile;
+    private JButton transferButton;
+    private JButton searchInWithdraw;
+    private JButton showInWithdraw;
+    private JButton withdrawButton;
+    private JButton viewBalanceSearch;
+    private JButton changePinButton;
+    private JButton clearPinButton;
+    private JButton editProfileFields;
+    private JButton jButton3;
+    private JButton searchButton;
+    private JButton totalButton;
+    private JButton depositButton;
+    private JButton searchInTransfer;
+    private JButton totalInTransfer;
+    private JButton showInTransfer;
     private com.toedter.calendar.JCalendar jCalendar1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField32;
-    private javax.swing.JTextField jTextField33;
-    private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField35;
-    private javax.swing.JTextField jTextField36;
-    private javax.swing.JTextField jTextField37;
-    private javax.swing.JTextField jTextField38;
-    private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField40;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private JComboBox<String> jComboBox1;
+    private JLabel jLabel1;
+    private JLabel jLabel10;
+    private JLabel jLabel11;
+    private JLabel jLabel12;
+    private JLabel jLabel13;
+    private JLabel jLabel14;
+    private JLabel jLabel15;
+    private JLabel jLabel16;
+    private JLabel jLabel17;
+    private JLabel jLabel18;
+    private JLabel jLabel19;
+    private JLabel jLabel2;
+    private JLabel jLabel20;
+    private JLabel jLabel21;
+    private JLabel jLabel22;
+    private JLabel jLabel23;
+    private JLabel jLabel24;
+    private JLabel jLabel25;
+    private JLabel jLabel26;
+    private JLabel jLabel27;
+    private JLabel jLabel28;
+    private JLabel jLabel29;
+    private JLabel jLabel3;
+    private JLabel jLabel30;
+    private JLabel jLabel31;
+    private JLabel jLabel32;
+    private JLabel jLabel33;
+    private JLabel jLabel34;
+    private JLabel jLabel35;
+    private JLabel jLabel36;
+    private JLabel jLabel37;
+    private JLabel jLabel38;
+    private JLabel jLabel39;
+    private JLabel jLabel4;
+    private JLabel jLabel40;
+    private JLabel jLabel41;
+    private JLabel jLabel42;
+    private JLabel jLabel43;
+    private JLabel jLabel44;
+    private JLabel jLabel45;
+    private JLabel jLabel46;
+    private JLabel jLabel47;
+    private JLabel jLabel48;
+    private JLabel jLabel5;
+    private JLabel jLabel6;
+    private JLabel jLabel7;
+    private JLabel jLabel8;
+    private JLabel jLabel9;
+    private JPanel jPanel1;
+    private JPanel jPanel10;
+    private JPanel jPanel2;
+    private JPanel jPanel3;
+    private JPanel jPanel4;
+    private JPanel jPanel5;
+    private JPanel jPanel6;
+    private JPanel jPanel7;
+    private JPanel jPanel8;
+    private JPanel jPanel9;
+    private JScrollPane jScrollPane1;
+    private JScrollPane jScrollPane2;
+    private JTabbedPane jTabbedPane1;
+    private JTable jTable1;
+    private JTable jTable2;
+    private JTextField jTextField1;
+    private JTextField jTextField10;
+    private JTextField jTextField11;
+    private JTextField jTextField12;
+    private JTextField jTextField13;
+    private JTextField jTextField14;
+    private JTextField jTextField15;
+    private JTextField jTextField16;
+    private JTextField jTextField17;
+    private JTextField jTextField18;
+    private JTextField jTextField19;
+    private JTextField jTextField2;
+    private JTextField jTextField20;
+    private JTextField jTextField21;
+    private JTextField jTextField22;
+    private JTextField jTextField23;
+    private JTextField jTextField24;
+    private JTextField jTextField25;
+    private JTextField jTextField26;
+    private JTextField jTextField27;
+    private JTextField jTextField28;
+    private JTextField jTextField29;
+    private JTextField jTextField3;
+    private JTextField jTextField30;
+    private JTextField jTextField31;
+    private JTextField jTextField32;
+    private JTextField jTextField33;
+    private JTextField jTextField34;
+    private JTextField jTextField35;
+    private JTextField jTextField36;
+    private JTextField jTextField37;
+    private JTextField jTextField38;
+    private JTextField jTextField39;
+    private JTextField jTextField4;
+    private JTextField jTextField40;
+    private JPasswordField jTextField41;
+    private JPasswordField jTextField42;
+    private JTextField jTextField5;
+    private JTextField jTextField6;
+    private JTextField jTextField7;
+    private JTextField jTextField8;
+    private JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
