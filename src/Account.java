@@ -47,9 +47,9 @@ Properties prop = propertyLoadObject.properties;
         jLabel3 = new JLabel();
         jComboBox1 = new JComboBox<>();
         jTextField9 = new JTextField();
-        jTextField5 = new JTextField();
+        name = new JTextField();
         jLabel8 = new JLabel();
-        jTextField3 = new JPasswordField();
+        passwordField = new JPasswordField();
         jLabel13 = new JLabel();
         jLabel12 = new JLabel();
         jLabel2 = new JLabel();
@@ -62,7 +62,7 @@ Properties prop = propertyLoadObject.properties;
         jTextField4 = new JTextField();
         jLabel7 = new JLabel();
         jLabel11 = new JLabel();
-        jTextField1 = new JTextField();
+        accNo = new JTextField();
         createButton = new JButton();
         backButton = new JButton();
         jRadioButton1 = new JRadioButton();
@@ -92,7 +92,7 @@ Properties prop = propertyLoadObject.properties;
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel8.setText("Name");
 
-        jTextField3.setEditable(false);
+        passwordField.setEditable(true);
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel13.setText("Sequrity Q.");
@@ -126,7 +126,7 @@ Properties prop = propertyLoadObject.properties;
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel11.setText("Caste");
 
-        jTextField1.setEditable(false);
+        accNo.setEditable(false);
 
         createButton.setText("Create");
         createButton.addActionListener(new java.awt.event.ActionListener() {
@@ -184,9 +184,9 @@ Properties prop = propertyLoadObject.properties;
                                     .addComponent(jLabel16))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField1)
+                                    .addComponent(accNo)
                                     .addComponent(jTextField2)
-                                    .addComponent(jTextField3)
+                                    .addComponent(passwordField)
                                     .addComponent(jTextField4)
                                     .addComponent(jComboBox1, 0, 165, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -201,7 +201,7 @@ Properties prop = propertyLoadObject.properties;
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel8)
                                         .addGap(49, 49, 49)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel9)
@@ -237,9 +237,9 @@ Properties prop = propertyLoadObject.properties;
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(accNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -250,7 +250,7 @@ Properties prop = propertyLoadObject.properties;
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
@@ -333,8 +333,8 @@ Properties prop = propertyLoadObject.properties;
             Class.forName("oracle.jdbc.driver.OracleDriver");
     Connection conn=DriverManager.getConnection("jdbc:sqlite:"+prop.getProperty("sqliteDbFileLocation")+"bank.sqlite");
             pst=conn.prepareStatement(sql);
-            pst.setString(1,jTextField5.getText());
-            pst.setString(2,jTextField1.getText());
+            pst.setString(1,name.getText());
+            pst.setString(2,accNo.getText());
             pst.setString(3,jTextField2.getText());
             pst.setString(4,jTextField10.getText());
             pst.execute();
@@ -360,7 +360,7 @@ Properties prop = propertyLoadObject.properties;
      */
     public void RandomAcc(){
         Random ra=new Random();
-        jTextField1.setText(""+ra.nextInt(10000+1));
+        accNo.setText(""+ra.nextLong(999999999));
     }
     
     /**
@@ -369,15 +369,15 @@ Properties prop = propertyLoadObject.properties;
      */
     public void RandomMICR(){
         Random ra=new Random();
-        jTextField2.setText(""+ra.nextInt(1000+1));
+        jTextField2.setText(""+ra.nextInt(9999));
     }
     /**
      * @apiNote Method to generate random PIN code for new user
      * @param NA
      */
     public void RandomPIN(){
-        Random ra=new Random();
-        jTextField3.setText(""+ra.nextInt(1000+1));
+        //Random ra=new Random();
+        
     }
     /**
      * @apiNote Method to clear all the fields for new user
@@ -385,11 +385,11 @@ Properties prop = propertyLoadObject.properties;
      */
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText("");
+        accNo.setText("");
         jTextField2.setText("");
-        jTextField3.setText("");
+        passwordField.setText("");
         jTextField4.setText("");
-        jTextField5.setText("");
+        name.setText("");
         jTextField6.setText("");
         jTextField7.setText("");
         jTextField9.setText("");
@@ -401,38 +401,71 @@ Properties prop = propertyLoadObject.properties;
      * @param evt
      */
 
+    private boolean validateAllFields() {
+    	//Validate Password
+    	String password = passwordField.getText();
+    	Validation validate = new Validation();
+        boolean isPasswordValid = validate.passwordValidate(password);
+        if(!isPasswordValid) {
+        	JOptionPane.showMessageDialog(null, "Password is not valid. It must contain 7-15 characters only including atleast:\n"
+        			+ "1. One capital case character\n"
+        			+ "2. One small case character\n"
+        			+ "3. One digit\n"
+        			+ "4. One Special character among \" .@#!$%&* \"");
+        	return false;
+        }
+        
+        //Validate Name
+        String fullName = name.getText();
+        boolean isNameValid = validate.nameValidate(fullName);
+        if(!isNameValid) {
+        	JOptionPane.showMessageDialog(null, "Name must contain alphabets of length upto 30 characters only");
+        	return false;
+        }
+        
+        
+    	return true;
+    }
     private void createButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String sql="insert into ACCOUNT(ACC,NAME,DOB,PIN,ACC_TYPE,NATIONALITY,CASTE,MICR_NO,GENDER,MOB,ADDRESS,SEC_Q,SEC_A,BALANCE) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        try{
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-    Connection conn=DriverManager.getConnection("jdbc:sqlite:"+prop.getProperty("sqliteDbFileLocation")+"bank.sqlite");
-    
-          pst=conn.prepareStatement(sql);
-          pst.setString(1,jTextField1.getText());
-          pst.setString(2,jTextField5.getText());
-          pst.setString(3, ((JTextField)jDateChooser1.getDateEditor().getUiComponent()).getText());
-          pst.setString(4,jTextField3.getText());
-          pst.setString(5, (String) jComboBox1.getSelectedItem());
-          pst.setString(6, (String) jComboBox2.getSelectedItem());
-          pst.setString(7,jTextField6.getText());
-          pst.setString(8,jTextField2.getText());
-          
-          jRadioButton1.setActionCommand("Male");
-          jRadioButton2.setActionCommand("Female");
-          pst.setString(9,buttonGroup1.getSelection().getActionCommand());
-          
-          pst.setString(10,jTextField7.getText());
-          pst.setString(11,jTextField4.getText());
-          pst.setString(12, (String) jComboBox3.getSelectedItem());
-          pst.setString(13,jTextField9.getText());
-          pst.setString(14,jTextField10.getText());
-          pst.execute();
-          JOptionPane.showMessageDialog(null, "Congratulations!\n Account has been Created");
-          Bal();
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
+    	if(validateAllFields()) {
+    		String sql="insert into ACCOUNT(ACC,NAME,DOB,PIN,ACC_TYPE,NATIONALITY,CASTE,MICR_NO,GENDER,MOB,ADDRESS,SEC_Q,SEC_A,BALANCE) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            try{
+                Class.forName("oracle.jdbc.driver.OracleDriver");
+        Connection conn=DriverManager.getConnection("jdbc:sqlite:"+prop.getProperty("sqliteDbFileLocation")+"bank.sqlite");
+        
+              pst=conn.prepareStatement(sql);
+              pst.setString(1,accNo.getText());
+              pst.setString(2,name.getText());
+              pst.setString(3, ((JTextField)jDateChooser1.getDateEditor().getUiComponent()).getText());
+              
+              
+              pst.setString(4,passwordField.getText());
+              pst.setString(5, (String) jComboBox1.getSelectedItem());
+              pst.setString(6, (String) jComboBox2.getSelectedItem());
+              pst.setString(7,jTextField6.getText());
+              pst.setString(8,jTextField2.getText());
+              
+              jRadioButton1.setActionCommand("Male");
+              jRadioButton2.setActionCommand("Female");
+              pst.setString(9,buttonGroup1.getSelection().getActionCommand());
+              
+              pst.setString(10,jTextField7.getText());
+              pst.setString(11,jTextField4.getText());
+              pst.setString(12, (String) jComboBox3.getSelectedItem());
+              pst.setString(13,jTextField9.getText());
+              pst.setString(14,jTextField10.getText());
+              pst.execute();
+              JOptionPane.showMessageDialog(null, "Congratulations!\n Account has been Created");
+              Bal();
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+            }
+    	}
+    	else {
+    		JOptionPane.showMessageDialog(null, "Fields' Validation Failed. Unable to create account");
+    	}
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -500,12 +533,12 @@ Properties prop = propertyLoadObject.properties;
     private JPanel jPanel1;
     private JRadioButton jRadioButton1;
     private JRadioButton jRadioButton2;
-    private JTextField jTextField1;
+    private JTextField accNo;
     private JTextField jTextField10;
     private JTextField jTextField2;
-    private JPasswordField jTextField3;
+    private JPasswordField passwordField;
     private JTextField jTextField4;
-    private JTextField jTextField5;
+    private JTextField name;
     private JTextField jTextField6;
     private JTextField jTextField7;
     private JTextField jTextField9;
