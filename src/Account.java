@@ -1,10 +1,24 @@
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.text.NumberFormat;
 import java.util.Properties;
 import java.util.Random;
+
+import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.GroupLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-import javax.swing.*;
 
 /**
  *
@@ -46,7 +60,12 @@ Properties prop = propertyLoadObject.properties;
         jLabel5 = new JLabel();
         jLabel3 = new JLabel();
         jComboBox1 = new JComboBox<>();
-        jTextField9 = new JTextField();
+        
+        NumberFormat amountFormat = NumberFormat.getCurrencyInstance();
+        
+        jTextField9 = new JFormattedTextField(amountFormat);
+        
+        
         name = new JTextField();
         jLabel8 = new JLabel();
         passwordField = new JPasswordField();
@@ -56,7 +75,7 @@ Properties prop = propertyLoadObject.properties;
         clearButton = new JButton();
         jLabel9 = new JLabel();
         jLabel4 = new JLabel();
-        jTextField7 = new JTextField();
+        mobile = new JTextField();
         jTextField2 = new JTextField();
         jComboBox2 = new JComboBox<>();
         jTextField4 = new JTextField();
@@ -76,6 +95,8 @@ Properties prop = propertyLoadObject.properties;
         jComboBox3 = new JComboBox<>();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel15 = new JLabel();
+        
+        
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,7 +139,7 @@ Properties prop = propertyLoadObject.properties;
 
         jTextField2.setEditable(false);
 
-        jComboBox2.setModel(new DefaultComboBoxModel<>(new String[] { "Select", "India", "Canada", "US", " " }));
+        jComboBox2.setModel(new DefaultComboBoxModel<>(new String[] { "Select", "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","The Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina","Faso","Burundi","Cabo","Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo, Democratic Republic of the","Congo, Republic of the","Costa Rica","Côte d’Ivoire","Croatia","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","East Timor (Timor-Leste)","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","The Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Korea, North","Korea, South","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia, Federated States of","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar (Burma)","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Macedonia","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","Sudan","Sudan, South","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe" }));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel7.setText("Address");
@@ -217,7 +238,7 @@ Properties prop = propertyLoadObject.properties;
                                                     .addComponent(jTextField9)
                                                     .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                     .addComponent(jTextField6)
-                                                    .addComponent(jTextField7)
+                                                    .addComponent(mobile)
                                                     .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(10, 10, 10)
@@ -265,7 +286,7 @@ Properties prop = propertyLoadObject.properties;
                     .addComponent(jRadioButton1)
                     .addComponent(jRadioButton2)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mobile, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -391,7 +412,7 @@ Properties prop = propertyLoadObject.properties;
         jTextField4.setText("");
         name.setText("");
         jTextField6.setText("");
-        jTextField7.setText("");
+        mobile.setText("");
         jTextField9.setText("");
         jTextField10.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -402,9 +423,11 @@ Properties prop = propertyLoadObject.properties;
      */
 
     private boolean validateAllFields() {
+    	Validation validate = new Validation();
+    	
     	//Validate Password
     	String password = passwordField.getText();
-    	Validation validate = new Validation();
+    	
         boolean isPasswordValid = validate.passwordValidate(password);
         if(!isPasswordValid) {
         	JOptionPane.showMessageDialog(null, "Password is not valid. It must contain 7-15 characters only including atleast:\n"
@@ -420,6 +443,22 @@ Properties prop = propertyLoadObject.properties;
         boolean isNameValid = validate.nameValidate(fullName);
         if(!isNameValid) {
         	JOptionPane.showMessageDialog(null, "Name must contain alphabets of length upto 30 characters only");
+        	return false;
+        }
+        
+        //Validate Date
+        String dob = (String)((JTextField) jDateChooser1.getDateEditor().getUiComponent()).getText();
+        boolean isDobValid = validate.dobValidate(dob);
+        if(!isDobValid) {
+        	JOptionPane.showMessageDialog(null, "Candidate must be more than and equal to 18 years of age");
+        	return false;
+        }
+        
+      //Validate Mobile
+        String mob = mobile.getText();
+        boolean isMobValid = validate.mobileValidate(mob);
+        if(!isMobValid) {
+        	JOptionPane.showMessageDialog(null, "Mobile number must be 10 digits only");
         	return false;
         }
         
@@ -450,7 +489,7 @@ Properties prop = propertyLoadObject.properties;
               jRadioButton2.setActionCommand("Female");
               pst.setString(9,buttonGroup1.getSelection().getActionCommand());
               
-              pst.setString(10,jTextField7.getText());
+              pst.setString(10,mobile.getText());
               pst.setString(11,jTextField4.getText());
               pst.setString(12, (String) jComboBox3.getSelectedItem());
               pst.setString(13,jTextField9.getText());
@@ -540,7 +579,7 @@ Properties prop = propertyLoadObject.properties;
     private JTextField jTextField4;
     private JTextField name;
     private JTextField jTextField6;
-    private JTextField jTextField7;
-    private JTextField jTextField9;
+    private JTextField mobile;
+    private JFormattedTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
